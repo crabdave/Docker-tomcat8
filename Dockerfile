@@ -34,7 +34,7 @@ RUN sed -i '/<\/Host>/i <Context path=\"/manager\" docBase=\"/opt/apache-tomcat-
 
 #modify tomcat-users.xml for deploy role auth
 RUN sed -i '/<\/tomcat-users>/i \<role rolename="admin"/>' /opt/apache-tomcat-8.0.33/conf/tomcat-users.xml
-RUN sed -i '/<\/tomcat-users>/i \<user username="admin" password="adminsunnymum0217" roles="admin,manager-script,manager-gui"/>' /opt/apache-tomcat-8.0.33/conf/tomcat-users.xml
+RUN sed -i '/<\/tomcat-users>/i \<user username="admin" password="dockerfile2017" roles="admin,manager-script,manager-gui"/>' /opt/apache-tomcat-8.0.33/conf/tomcat-users.xml
 
 #modify web.xml for the war more than 50M
 RUN sed -i 's/52428800/-1/g' /opt/apache-tomcat-8.0.33/webapps/manager/WEB-INF/web.xml 
